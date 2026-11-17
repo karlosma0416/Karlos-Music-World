@@ -5,7 +5,7 @@ export const videos = [
     { id: "cghNgP67-xk", title: "Autumn Rain (Live) with IMsweetyt" },
     { id: "c0GYclJArgI", title: "第一個清晨(First Morning) Cover" },
     { id: "Cb2blMlwI6U", title: "愛錯(Ai Cuo) Cover" },
-    { id: "GB2ZiYnwi0A", title: "Falling into you fr.IMsweetyt (Cover)" },
+    { id: "GB2ZiYnwi0A", title: "falling into you with IMsweetyt (Cover)" },
     { id: "AfX6MF48icU", title: "Spring River Flower Moonlight Night" },
 ] as const;
 
