@@ -12,6 +12,10 @@ import "../globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   applicationName: site.name,
+  icons: {
+    icon: { url: "/Icarus.jpg", type: "image/jpeg" },
+    shortcut: "/Icarus.jpg",
+  },
 };
 
 export function generateStaticParams() {
