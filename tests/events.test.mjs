@@ -96,7 +96,7 @@ test("confirmed event data has unique IDs, slugs and precise dates", () => {
         assert.match(event.id, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
         assert.match(event.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
     }
-    assert.equal(events.length, 2);
+    assert.equal(events.length, 6);
     assert.equal(events[0].date, "2025-04-07");
     assert.equal(events[0].datePrecision, "day");
     assert.equal(events[0].category, undefined);
@@ -108,25 +108,126 @@ test("confirmed event data has unique IDs, slugs and precise dates", () => {
     }
 });
 
-test("Karlos's Live Ⅰ has the confirmed date, venue, cover and eight arranged detail photos", () => {
+test("2025 and 2026 singing contests keep distinct years without role descriptions", () => {
+    const previous = events.find((event) => event.slug === "hku-singing-contest-2025");
+    const current = events.find((event) => event.slug === "hku-singing-contest-2026");
+    assert.equal(current.date, "2026-03-29");
+    assert.equal(current.datePrecision, "day");
+    assert.equal(getEventCover(current).src, "/events/singcon9.jpg");
+    assert.equal(getEventImages(current).map((image) => image.src).join(","),
+        [9, 10, 11, 12].map((number) => `/events/singcon${number}.jpg`).join(","));
+    assert.equal(previous.summary, undefined);
+    assert.equal(current.summary, undefined);
+    assert.equal(groupEventsByYear(events)[0].events[2].id, current.id);
+    for (const locale of ["en", "zh", "zh-cn"]) {
+        assert(previous.title[locale].startsWith("2025 "));
+        assert(current.title[locale].startsWith("2026 "));
+        assert.equal(current.location[locale], previous.location[locale]);
+        assert.equal(formatEventDate(current, locale), "2026.3.29");
+        const detail = render([current], locale, true);
+        assert.equal((detail.match(/<figure/g) || []).length, 4);
+        assert(!detail.includes('class="event-summary"'));
+        assert(!render([previous], locale, true).includes('class="event-summary"'));
+        assert(!render([previous, current], locale).includes('class="event-entry-summary"'));
+        assert(detail.includes(`href="/${locale}/events/#event-${current.id}"`));
+        for (const image of [current.cover, ...current.gallery]) assert(image.alt[locale]);
+    }
+    for (const image of [current.cover, ...current.gallery]) {
+        assert(readFileSync(path.join(root, "public", image.src)).length > 0);
+        assert(image.width > 0 && image.height > 0);
+    }
+});
+
+test("Karlos's Live Ⅰ has the confirmed date, venue, cover and ten arranged detail photos", () => {
     const live = events.find((event) => event.slug === "karlos-live-i-2026");
     assert.equal(live.date, "2026-04-19");
-    assert.equal(getEventCover(live).src, "/events/live0.jpg");
+    assert.equal(getEventCover(live).src, "/events/live3.jpg");
     assert.equal(getEventImages(live).map((image) => image.src).join(","),
-        [6, 1, 4, 2, 3, 5, 7, 8].map((number) => `/events/live${number}.jpg`).join(","));
+        [0, 13, 6, 1, 4, 2, 3, 5, 7, 8].map((number) => `/events/live${number}.jpg`).join(","));
     assert.equal(live.gallery.filter((image) => image.layout === "wide").length, 2);
     assert(events[0].location.en.endsWith(", Hong Kong"));
-    assert.equal(groupEventsByYear(events)[0].events[0].id, live.id);
+    assert.equal(groupEventsByYear(events)[0].events[1].id, live.id);
     for (const locale of ["en", "zh", "zh-cn"]) {
         assert.equal(live.title[locale], "Karlos's Live Ⅰ");
         assert.equal(formatEventDate(live, locale), "2026.4.19");
         assert(live.location[locale].includes("Open House"));
         const detail = render([live], locale, true);
-        assert.equal((detail.match(/<figure/g) || []).length, 8);
-        assert(!detail.includes('src="/events/live0.jpg"'));
+        assert.equal((detail.match(/<figure/g) || []).length, 10);
+        assert(detail.includes('src="/events/live0.jpg"'));
         assert(detail.includes(`href="/${locale}/events/#event-${live.id}"`));
     }
     for (const image of [live.cover, ...live.gallery]) {
+        assert(readFileSync(path.join(root, "public", image.src)).length > 0);
+        assert(image.width > 0 && image.height > 0);
+    }
+});
+
+test("Karlos's Live Ⅱ has the confirmed date, venue, cover and three gallery photos", () => {
+    const live = events.find((event) => event.slug === "karlos-live-ii-2026");
+    assert.equal(live.date, "2026-08-23");
+    assert.equal(groupEventsByYear(events)[0].events[0].id, live.id);
+    assert.equal(getEventCover(live).src, "/events/live11.jpg");
+    assert.equal(getEventImages(live).map((image) => image.src).join(","),
+        [10, 9, 12].map((number) => `/events/live${number}.jpg`).join(","));
+    for (const locale of ["en", "zh", "zh-cn"]) {
+        assert.equal(live.title[locale], "Karlos's Live Ⅱ");
+        assert.equal(formatEventDate(live, locale), "2026.8.23");
+        assert(live.location[locale].includes("ROCK' N ROLL"));
+        const detail = render([live], locale, true);
+        assert.equal((detail.match(/<figure/g) || []).length, 3);
+        assert(!detail.includes('src="/events/live11.jpg"'));
+        assert(detail.includes(`href="/${locale}/events/#event-${live.id}"`));
+    }
+    for (const image of [live.cover, ...live.gallery]) {
+        assert(readFileSync(path.join(root, "public", image.src)).length > 0);
+        assert(image.width > 0 && image.height > 0);
+    }
+});
+
+test("Zhixin centenary has the confirmed date, venue, case-sensitive cover and ten ordered photos", () => {
+    const event = events.find((entry) => entry.slug === "zhixin-centenary-2021");
+    assert.equal(event.date, "2021-11-21");
+    assert.equal(event.datePrecision, "day");
+    assert.equal(event.title.zh, "廣州市執信中學百年校慶");
+    assert.equal(event.location.zh, "執信中學，越秀，廣州");
+    assert.equal(getEventCover(event).src, "/events/Century.jpg");
+    assert.equal(getEventImages(event).map((image) => image.src).join(","),
+        ["/events/Century.jpg", ...[1, 2, 3, 4, 5].map((number) => `/events/century${number}.jpg`),
+            "/events/fengenprize.jpg", ...[1, 2, 3].map((number) => `/events/fengenprize${number}.jpg`)].join(","));
+    assert.equal(groupEventsByYear(events).find((group) => group.year === "2021").events[0].id, event.id);
+    for (const locale of ["en", "zh", "zh-cn"]) {
+        assert.equal(formatEventDate(event, locale), "2021.11.21");
+        const detail = render([event], locale, true);
+        assert.equal((detail.match(/<figure/g) || []).length, 10);
+        assert(detail.includes(`href="/${locale}/events/#event-${event.id}"`));
+        assert(render(events, locale).includes(`href="/${locale}/events/${event.slug}/"`));
+        for (const image of [event.cover, ...event.gallery]) assert(image.alt[locale]);
+    }
+    for (const image of [event.cover, ...event.gallery]) {
+        assert(readFileSync(path.join(root, "public", image.src)).length > 0);
+        assert(image.width > 0 && image.height > 0);
+    }
+});
+
+test("Feng'en Night has the confirmed date, venue, cover and three ordered photos", () => {
+    const event = events.find((entry) => entry.slug === "fengen-night-2020");
+    assert.equal(event.date, "2020-08-29");
+    assert.equal(event.datePrecision, "day");
+    assert.equal(event.title["zh-cn"], "“执信力量•你我同行”奉恩之夜筹款晚会");
+    assert.equal(event.location.zh, "花園酒店，廣州");
+    assert.equal(getEventCover(event).src, "/events/fengen.jpg");
+    assert.equal(getEventImages(event).map((image) => image.src).join(","),
+        "/events/fengen.jpg,/events/fengen2.jpg,/events/fengen3.jpg");
+    assert.equal(groupEventsByYear(events).at(-1).events[0].id, event.id);
+    for (const locale of ["en", "zh", "zh-cn"]) {
+        assert.equal(formatEventDate(event, locale), "2020.8.29");
+        const detail = render([event], locale, true);
+        assert.equal((detail.match(/<figure/g) || []).length, 3);
+        assert(detail.includes(`href="/${locale}/events/#event-${event.id}"`));
+        assert(render(events, locale).includes(`href="/${locale}/events/${event.slug}/"`));
+        for (const image of [event.cover, ...event.gallery]) assert(image.alt[locale]);
+    }
+    for (const image of [event.cover, ...event.gallery]) {
         assert(readFileSync(path.join(root, "public", image.src)).length > 0);
         assert(image.width > 0 && image.height > 0);
     }
@@ -154,7 +255,7 @@ for (const locale of ["en", "zh", "zh-cn"]) {
         const minimal = render([fixture[0]], locale);
         const actual = render(events, locale);
         assert(actual.includes('src="/events/singcon2.jpg"'));
-        assert.equal((actual.match(/<img /g) || []).length, 2);
+        assert.equal((actual.match(/<img /g) || []).length, 6);
         assert.match(minimal, /<time[^>]*dateTime="2024"/);
         assert(!minimal.includes("event-cover"));
         assert(!minimal.includes("event-links"));

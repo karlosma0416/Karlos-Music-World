@@ -487,7 +487,18 @@ html[lang^="zh"] .content-page h1 {
 }
 
 .events-timeline {
+    position: relative;
     margin-top: clamp(40px, 5vw, 64px);
+}
+
+.events-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    width: 1px;
+    background: var(--line);
 }
 
 .event-year-group+.event-year-group {
@@ -498,7 +509,6 @@ html[lang^="zh"] .content-page h1 {
     margin: 0 0 0 4px;
     padding: 0;
     list-style: none;
-    border-left: 1px solid var(--line);
 }
 
 .event-node {
@@ -516,7 +526,7 @@ html[lang^="zh"] .content-page h1 {
     content: "";
     position: absolute;
     top: 8px;
-    left: -4px;
+    left: -3px;
     width: 7px;
     height: 7px;
     border: 1px solid var(--muted);
