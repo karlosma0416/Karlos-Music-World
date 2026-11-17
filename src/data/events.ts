@@ -40,9 +40,9 @@ export const events: readonly TimelineEvent[] = [
         datePrecision: "day",
         // Award confirmed in the biography; exact date supplied by the user.
         title: {
-            en: "First runner-up in the HKU CSSAUD Singing Contest",
-            zh: "香港大學 CSSAUD 歌唱比賽亞軍",
-            "zh-cn": "香港大学 CSSAUD 歌唱比赛亚军",
+            en: "HKU CSSAUD Singing Contest",
+            zh: "香港大學 CSSAUD 歌唱比賽",
+            "zh-cn": "香港大学 CSSAUD 歌唱比赛",
         },
         location: {
             en: "Yuet Ming Auditorium, Chong Yuet Ming Cultural Centre, The University of Hong Kong, Hong Kong",
