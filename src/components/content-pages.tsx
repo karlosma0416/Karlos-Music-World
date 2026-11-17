@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { ExternalLinkArrow } from "@/components/external-link-arrow";
+import { EventsTimeline } from "@/components/events-content";
+import { events } from "@/data/events";
 import { site } from "@/data/site";
 import { works } from "@/data/works";
 import type { Locale } from "@/i18n/config";
@@ -46,12 +48,11 @@ export function MusicPage({ locale, dictionary: d }: { locale: Locale; dictionar
     );
 }
 
-export function EventsPage({ dictionary: d }: { dictionary: Dictionary }) {
+export function EventsPage({ locale, dictionary: d }: { locale: Locale; dictionary: Dictionary }) {
     return (
         <>
-            <p className="eyebrow">{d.events.eyebrow}</p>
-            <h1>{d.nav.events}</h1>
-            <p className="page-intro">{d.events.body}</p>
+            <h1>{d.events.title}</h1>
+            <EventsTimeline entries={events} locale={locale} dictionary={d} />
         </>
     );
 }

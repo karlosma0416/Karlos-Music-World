@@ -7,7 +7,7 @@ const zh = {
   },
   pageDescriptions: {
     music: "探索 Karlos Ma 的音樂作品，包括《餘生僅有》、《房間》、《伊卡洛斯之翼》、《秋雨》及《雪國》。",
-    events: "Karlos Ma 的活動資訊。正式活動資料將於確認後更新。",
+    events: "Karlos Ma 的演出、活動與個人里程碑，以及照片與文字紀錄。",
     about: "認識 Karlos Ma：2002 年生於廣州、現居香港的創作歌手，以聲音探索意象、情感與音樂敘事。",
     contact: "與 Karlos Ma 聯絡，洽談音樂、影像及跨領域創作合作。",
   },
@@ -33,7 +33,10 @@ const zh = {
     listenOn: "在 {platform} 聆聽《{title}》",
   },
   events: {
-    eyebrow: "活動資訊", body: "活動資訊將於確認後公布。",
+    title: "活動紀錄", body: "演出、相遇與重要時刻。點進每一則紀錄，閱讀其中的故事。",
+    back: "返回時間軸", gallery: "活動圖集", readMore: "閱讀紀錄", related: "相關連結",
+    emptyTitle: "歷程尚待記錄", emptyBody: "已確認的演出、活動與個人里程碑，將陸續記錄於此。",
+    performance: "演出", activity: "活動", milestone: "里程碑", yearLabel: "{year} 年歷程",
   },
   about: {
     eyebrow: "關於 Karlos Ma", title: "不只聲音，", titleSecond: "也是一種感知。",
@@ -63,7 +66,7 @@ const en: Dictionary = {
   },
   pageDescriptions: {
     music: "Explore music by Karlos Ma: The Only, Room, Icarus's Wings, Autumn Rain and Farewell in Winter.",
-    events: "Events by Karlos Ma. Official event details will be added once confirmed.",
+    events: "Performances, activities and milestones by Karlos Ma, with photographs and personal stories.",
     about: "Meet Karlos Ma, a singer-songwriter born in Guangzhou in 2002 and based in Hong Kong, exploring vivid imagery, emotion and storytelling through sound.",
     contact: "Get in touch with Karlos Ma for music, moving images and creative collaborations.",
   },
@@ -89,7 +92,10 @@ const en: Dictionary = {
     listenOn: "Listen to {title} on {platform}",
   },
   events: {
-    eyebrow: "Events & appearances", body: "Event details will be announced once confirmed.",
+    title: "Events", body: "Performances, encounters and defining moments. Open a record to explore its story.",
+    back: "Back to timeline", gallery: "Event gallery", readMore: "Read the story", related: "Related links",
+    emptyTitle: "A story still unfolding", emptyBody: "Confirmed performances, activities and personal milestones will be recorded here.",
+    performance: "Performance", activity: "Activity", milestone: "Milestone", yearLabel: "Timeline for {year}",
   },
   about: {
     eyebrow: "About Karlos Ma", title: "Beyond sound.", titleSecond: "Into feeling.",
@@ -115,7 +121,7 @@ const hans: Dictionary = {
   },
   pageDescriptions: {
     music: "探索 Karlos Ma 的音乐作品，包括《余生仅有》、《房间》、《伊卡洛斯之翼》、《秋雨》及《雪国》。",
-    events: "Karlos Ma 的活动信息。正式活动资料将在确认后更新。",
+    events: "Karlos Ma 的演出、活动与个人里程碑，以及照片与文字记录。",
     about: "认识 Karlos Ma：2002 年生于广州、现居香港的创作歌手，以声音探索意象、情感与音乐叙事。",
     contact: "联系 Karlos Ma，洽谈音乐、影像及跨领域创作合作。",
   },
@@ -141,7 +147,10 @@ const hans: Dictionary = {
     listenOn: "在 {platform} 收听《{title}》",
   },
   events: {
-    eyebrow: "活动信息", body: "活动信息将在确认后公布。",
+    title: "活动记录", body: "演出、相遇与重要时刻。点进每一则记录，阅读其中的故事。",
+    back: "返回时间轴", gallery: "活动图集", readMore: "阅读记录", related: "相关链接",
+    emptyTitle: "历程尚待记录", emptyBody: "已确认的演出、活动与个人里程碑，将陆续记录于此。",
+    performance: "演出", activity: "活动", milestone: "里程碑", yearLabel: "{year} 年历程",
   },
   about: {
     eyebrow: "关于 Karlos Ma", title: "不只声音，", titleSecond: "也是一种感知。",
