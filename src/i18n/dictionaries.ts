@@ -41,7 +41,7 @@ const zh = {
   about: {
     eyebrow: "關於 Karlos Ma", title: "不只聲音，", titleSecond: "也是一種感知。",
     intro: "馬浩陽是一位創作歌手，2002 年出生於中國廣州，現居香港。",
-    body: "他六歲開始學習鋼琴，畢業於香港大學，主修計算機科學。他的音樂讓分析思維與直覺表達展開對話，並以人文關懷與真摯情感為根基。\n\n他的創作核心，是透過聲音構築鮮明意象——以旋律、歌詞與人聲表達，喚起場景、氛圍與動態，賦予情感空間與視覺的維度。他的作品包括與吳雨松的一系列合作，以及個人專輯《伊卡洛斯之翼》。他曾獲 2025 年香港大學歌唱比賽亞軍，原創作品《春江花月夜》則獲廣州市教育研究院古詩詞吟誦比賽一等獎。\n\n他擁有豐富的演出與錄音經驗，活躍於校內外舞台。他在香港發起「Karlos’s Live」演出系列，將原創歌曲及對其他音樂人精選作品的演繹帶入本地社群。他亦計劃將繪畫、人工智能及其他媒介融入現場演出，探索聲音與影像之間的關係，拓展音樂敘事與表達的可能性。",
+    body: "他六歲開始學習鋼琴，畢業於香港大學，主修計算機科學。他的音樂讓分析思維與直覺表達展開對話，並以人文關懷與真摯情感為根基。\n\n他的創作核心，是透過聲音構築鮮明意象——以旋律、歌詞與人聲表達，喚起場景、氛圍與動態，賦予情感空間與視覺的維度。他的作品包括與青年鋼琴家吳雨松的一系列合作，以及個人專輯《伊卡洛斯之翼》。他曾獲 2025 年香港大學歌唱比賽亞軍，原創作品《春江花月夜》則獲廣州市教育研究院古詩詞吟誦比賽一等獎。\n\n他擁有豐富的演出與錄音經驗，活躍於校內外舞台。他在香港發起「Karlos’s Live」演出系列，將原創歌曲及對其他音樂人精選作品的演繹帶入本地社群。他亦計劃將繪畫、人工智能及其他媒介融入現場演出，探索聲音與影像之間的關係，拓展音樂敘事與表達的可能性。",
     image: "個人影像待提供", imageNote: "影像佔位・待替換正式素材",
     imageAlt: "Karlos Ma 坐在窗邊，望向窗外，陽光灑入室內", index: "關於／01",
   },
@@ -100,7 +100,7 @@ const en: Dictionary = {
   about: {
     eyebrow: "About Karlos Ma", title: "Beyond sound.", titleSecond: "Into feeling.",
     intro: "Karlos Ma is a singer-songwriter born in 2002 in Guangzhou, China, and currently based in Hong Kong.",
-    body: "Ma began piano training at the age of six. He graduated from the University of Hong Kong, majoring in Computer Science. His music brings analytical thinking into dialogue with intuitive expression, grounded in humanistic concerns and emotional honesty.\n\nCentral to Ma’s practice is the creation of vivid imagery through sound. Through melody, lyrics, and vocal expression, he evokes scenes, atmospheres, and movement, giving emotion a spatial and visual dimension. His work includes collaborations with Yusong Wu and his solo album, *Icarus’s Wings*. He was awarded first runner-up in the 2025 HKU Singing Contest, and his original composition *Spring River in the Flower Moon Night* received first prize in the Guangzhou Academy of Educational Research Classical Poetry Chanting Competition.\n\nWith extensive performance and recording experience, Ma has been active on stages both on and off campus. He launched *Karlos’s Live* in Hong Kong, a performance series bringing his original songs and interpretations of selected works by other artists to the local community. He also plans to incorporate painting, artificial intelligence, and other media into live performance, exploring the relationship between sound and image to expand the narrative and expressive possibilities of music.",
+    body: "Ma began piano training at the age of six. He graduated from the University of Hong Kong, majoring in Computer Science. His music brings analytical thinking into dialogue with intuitive expression, grounded in humanistic concerns and emotional honesty.\n\nCentral to Ma’s practice is the creation of vivid imagery through sound. Through melody, lyrics, and vocal expression, he evokes scenes, atmospheres, and movement, giving emotion a spatial and visual dimension. His work includes collaborations with young pianist Yusong Wu and his solo album, *Icarus’s Wings*. He was awarded first runner-up in the 2025 HKU Singing Contest, and his original composition *Spring River in the Flower Moon Night* received first prize in the Guangzhou Academy of Educational Research Classical Poetry Chanting Competition.\n\nWith extensive performance and recording experience, Ma has been active on stages both on and off campus. He launched *Karlos’s Live* in Hong Kong, a performance series bringing his original songs and interpretations of selected works by other artists to the local community. He also plans to incorporate painting, artificial intelligence, and other media into live performance, exploring the relationship between sound and image to expand the narrative and expressive possibilities of music.",
     image: "Artist image to follow", imageNote: "Image placeholder · Final image to follow",
     imageAlt: "Karlos Ma sitting beside a window, looking outside as sunlight fills the room", index: "About / 01",
   },
@@ -155,7 +155,7 @@ const hans: Dictionary = {
   about: {
     eyebrow: "关于 Karlos Ma", title: "不只声音，", titleSecond: "也是一种感知。",
     intro: "马浩阳是一位创作歌手，2002 年出生于中国广州，现居香港。",
-    body: "他六岁开始学习钢琴，毕业于香港大学，主修计算机科学。他的音乐让分析思维与直觉表达展开对话，并以人文关怀与真挚情感为根基。\n\n他的创作核心，是透过声音构筑鲜明意象——以旋律、歌词与人声表达，唤起场景、氛围与动态，赋予情感空间与视觉的维度。他的作品包括与吴雨松的一系列合作，以及个人专辑《伊卡洛斯之翼》。他曾获 2025 年香港大学歌唱比赛亚军，原创作品《春江花月夜》则获广州市教育研究院古诗词吟诵比赛一等奖。\n\n他拥有丰富的演出与录音经验，活跃于校内外舞台。他在香港发起「Karlos’s Live」演出系列，将原创歌曲及对其他音乐人精选作品的演绎带入本地社群。他亦计划将绘画、人工智能及其他媒介融入现场演出，探索声音与影像之间的关系，拓展音乐叙事与表达的可能性。",
+    body: "他六岁开始学习钢琴，毕业于香港大学，主修计算机科学。他的音乐让分析思维与直觉表达展开对话，并以人文关怀与真挚情感为根基。\n\n他的创作核心，是透过声音构筑鲜明意象——以旋律、歌词与人声表达，唤起场景、氛围与动态，赋予情感空间与视觉的维度。他的作品包括与青年钢琴家吴雨松的一系列合作，以及个人专辑《伊卡洛斯之翼》。他曾获 2025 年香港大学歌唱比赛亚军，原创作品《春江花月夜》则获广州市教育研究院古诗词吟诵比赛一等奖。\n\n他拥有丰富的演出与录音经验，活跃于校内外舞台。他在香港发起「Karlos’s Live」演出系列，将原创歌曲及对其他音乐人精选作品的演绎带入本地社群。他亦计划将绘画、人工智能及其他媒介融入现场演出，探索声音与影像之间的关系，拓展音乐叙事与表达的可能性。",
     image: "个人影像待提供", imageNote: "影像占位・待替换正式素材",
     imageAlt: "Karlos Ma 坐在窗边，望向窗外，阳光洒入室内", index: "关于／01",
   },
