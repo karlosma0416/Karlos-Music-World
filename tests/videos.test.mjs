@@ -27,7 +27,7 @@ function load(relative) {
     vm.runInNewContext(code, { module: loaded, exports: loaded.exports, require: localRequire });
     return loaded.exports;
 }
-const { videos, videoUrl, videoEmbedUrl } = load("src/data/videos.ts");
+const { videos, videoUrl, videoEmbedUrl, getVideoTitle } = load("src/data/videos.ts");
 const { VideosPage } = load("src/components/videos-page.tsx");
 const { getDictionary } = load("src/i18n/dictionaries.ts");
 
@@ -45,14 +45,19 @@ test("seven verified YouTube videos preserve supplied order and use safe embed U
 for (const locale of ["en", "zh", "zh-cn"]) {
     test(`${locale}: accessible thumbnails and fallback links, no initial player requests`, () => {
         const dictionary = getDictionary(locale);
-        const html = renderToStaticMarkup(React.createElement(VideosPage, { dictionary }));
+        const html = renderToStaticMarkup(React.createElement(VideosPage, { locale, dictionary }));
         assert(html.includes(`<h1>${dictionary.nav.videos}</h1>`));
         assert.equal((html.match(/<article /g) || []).length, 7);
         assert.equal((html.match(/<button /g) || []).length, 7);
         assert.equal((html.match(/<img /g) || []).length, 7);
         assert.equal((html.match(/rel="noopener noreferrer"/g) || []).length, 7);
         assert(!html.includes("<iframe"));
+        if (locale === "zh-cn") {
+            for (const title of ["余生仅有", "雪国", "第一个清晨", "爱错"]) assert(html.includes(title));
+            for (const title of ["餘生僅有", "雪國", "第一個清晨", "愛錯"]) assert(!html.includes(title));
+        }
         for (const video of videos) {
+            assert(html.includes(`<h2>${getVideoTitle(video, locale)}</h2>`));
             assert(html.includes(videoUrl(video.id).replaceAll("&", "&amp;")));
             assert(html.includes(`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`));
         }

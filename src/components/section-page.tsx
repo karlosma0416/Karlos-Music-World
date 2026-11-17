@@ -12,7 +12,7 @@ export async function SectionPage({ params, section }: { params: Promise<{ local
   return (
     <main id="main-content" className={`content-page ${section}-page`} tabIndex={-1}>
       {section === "music" && <MusicPage locale={locale} dictionary={dictionary} />}
-      {section === "videos" && <VideosPage dictionary={dictionary} />}
+      {section === "videos" && <VideosPage locale={locale} dictionary={dictionary} />}
       {section === "events" && <EventsPage locale={locale} dictionary={dictionary} />}
       {section === "about" && <AboutPage dictionary={dictionary} />}
       {section === "contact" && <ContactPage dictionary={dictionary} />}
