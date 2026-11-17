@@ -4,6 +4,7 @@ export const site = {
   name: "Karlos Ma",
   wordmark: "KARLOS MA",
   url: "https://karlosma.com",
+  messageEndpoint: "https://formspree.io/f/xoeddjkr",
   copyrightYear: new Date().getFullYear(),
   hero: { src: "/Icarus.jpg", video: "/video/Icarusmov.mov", isPlaceholder: false },
   about: { src: "/karlos.jpg" as string | null, isPlaceholder: false },

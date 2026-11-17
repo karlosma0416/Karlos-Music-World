@@ -57,6 +57,14 @@ const zh = {
     platformLabel: "前往 {platform} 上的 Karlos Ma 主頁",
     soon: "即將提供", email: "電子郵件", external: "前往平台",
   },
+  message: {
+    title: "留個訊息給 Karlos", name: "姓名", email: "你的電子郵件（選填）", body: "留言內容",
+    send: "傳送留言", sending: "傳送中…", success: "留言已提交，謝謝你的來信。",
+    error: "未能確認傳送成功，內容已保留。請稍後重試，或直接寄送電子郵件。",
+    preview: "預覽模式：尚未接通郵件服務，暫時無法傳送。",
+    anonymous: "匿名留言",
+    consent: "我同意透過 Formspree 傳送以上資料以便聯絡。", website: "請留空此欄位",
+  },
   footer: { rights: "版權所有。", top: "回到頂端", note: "音樂・影像・創作" },
 };
 
@@ -121,6 +129,14 @@ const en: Dictionary = {
     platformLabel: "Visit Karlos Ma on {platform}",
     soon: "Coming soon", email: "Email", external: "Visit platform",
   },
+  message: {
+    title: "Leave a message for Karlos", name: "Name", email: "Your email (optional)", body: "Message",
+    send: "Send message", sending: "Sending…", success: "Your message has been submitted. Thank you for writing.",
+    error: "Delivery could not be confirmed. Your message has been kept here. Please retry later or email directly.",
+    preview: "Preview mode: email delivery is not connected yet. Sending is disabled.",
+    anonymous: "Send anonymously",
+    consent: "I agree to send these details via Formspree to get in touch.", website: "Leave this field empty",
+  },
   footer: { rights: "All rights reserved.", top: "Back to top", note: "Music · Film · Art" },
 };
 
@@ -180,6 +196,14 @@ const hans: Dictionary = {
     netease: "网易云音乐", profile: "音乐主页", newTab: "（在新标签页中打开）",
     platformLabel: "前往 {platform} 上的 Karlos Ma 主页",
     soon: "即将提供", email: "电子邮箱", external: "前往平台",
+  },
+  message: {
+    title: "给 Karlos 留言", name: "姓名", email: "你的邮箱（选填）", body: "留言内容",
+    send: "发送留言", sending: "发送中…", success: "留言已提交，谢谢你的来信。",
+    error: "无法确认发送成功，内容已保留。请稍后重试，或直接发送电子邮件。",
+    preview: "预览模式：尚未接通邮件服务，暂时无法发送。",
+    anonymous: "匿名留言",
+    consent: "我同意通过 Formspree 发送以上信息以便联系。", website: "请留空此字段",
   },
   footer: { rights: "版权所有。", top: "回到顶部", note: "音乐・影像・创作" },
 };

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ExternalLinkArrow } from "@/components/external-link-arrow";
+import { MessageForm } from "@/components/message-form";
 import { EventsTimeline } from "@/components/events-content";
 import { events } from "@/data/events";
 import { site } from "@/data/site";
@@ -112,6 +113,7 @@ export function ContactPage({ dictionary: d }: { dictionary: Dictionary }) {
                     </li>
                 ))}
             </ul>
+            <MessageForm labels={d.message} />
         </div>
     );
 }
