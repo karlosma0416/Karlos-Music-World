@@ -2,7 +2,7 @@ import type { Locale } from "./config";
 
 const zh = {
   meta: {
-    title: "Karlos Ma｜音樂・影像・創作",
+    title: "Karlos Ma | 音樂 · 藝術",
     description: "Karlos Ma 官方網站。探索音樂、影像與藝術創作，或聯絡洽談合作。",
   },
   pageDescriptions: {
@@ -110,7 +110,7 @@ const en: Dictionary = {
 
 const hans: Dictionary = {
   meta: {
-    title: "Karlos Ma｜音乐・影像・创作",
+    title: "Karlos Ma | 音乐 · 艺术",
     description: "Karlos Ma 官方网站。探索音乐、影像与艺术创作，或联系洽谈合作。",
   },
   pageDescriptions: {
