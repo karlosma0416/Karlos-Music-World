@@ -58,7 +58,7 @@ export type Dictionary = {
 
 const en: Dictionary = {
   meta: {
-    title: "Karlos Ma | Music",
+    title: "Karlos Ma | Music & Art",
     description: "The official website of Karlos Ma. A space for music, moving images, artistic exploration and creative collaboration.",
   },
   pageDescriptions: {
