@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import { defaultLocale, isLocale, locales, localeSettings, type Locale } from "./config";
 import { getDictionary } from "./dictionaries";
 
-export const sections = ["music", "events", "about", "contact"] as const;
+export const sections = ["music", "videos", "events", "about", "contact"] as const;
 export type Section = (typeof sections)[number];
 
 export async function sectionMetadata(params: Promise<{ locale: string }>, section: Section): Promise<Metadata> {

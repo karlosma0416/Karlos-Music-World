@@ -6,6 +6,7 @@ const zh = {
     description: "Karlos Ma 官方網站。探索音樂、影像與藝術創作，或聯絡洽談合作。",
   },
   pageDescriptions: {
+    videos: "觀看 Karlos Ma 的音樂錄影帶、現場演出與翻唱影片。",
     music: "探索 Karlos Ma 的音樂作品，包括《餘生僅有》、《房間》、《伊卡洛斯之翼》、《秋雨》及《雪國》。",
     events: "Karlos Ma 的演出、活動與個人里程碑，以及照片與文字紀錄。",
     about: "認識 Karlos Ma：2002 年生於廣州、現居香港的創作歌手，以聲音探索意象、情感與音樂敘事。",
@@ -14,7 +15,7 @@ const zh = {
   nav: {
     welcomeIntro: "歡迎來到", welcomeSuffix: "", welcomeSubject: "的音樂世界。",
     welcomeTitle: "歡迎來到 Karlos Ma 的音樂世界。",
-    music: "音樂", events: "活動", about: "關於", contact: "聯絡",
+    music: "音樂", videos: "影片", events: "活動", about: "關於", contact: "聯絡",
     mainLabel: "主要導覽", languageLabel: "選擇語言", homeLabel: "Karlos Ma 首頁",
     switchZh: "切換至繁體中文", switchEn: "Switch to English", switchHans: "切换至简体中文", skip: "跳至主要內容",
   },
@@ -31,6 +32,10 @@ const zh = {
     cover: "封面待提供", year: "年份待填", status: "作品資料待補", listen: "聆聽作品",
     coverAlt: "作品封面：",
     listenOn: "在 {platform} 聆聽《{title}》",
+  },
+  videos: {
+    play: "播放：{title}", watch: "在 YouTube 觀看", close: "關閉播放器",
+    note: "影片由 YouTube 提供播放。若無法載入，請前往 YouTube 觀看。",
   },
   events: {
     title: "活動紀錄", body: "演出、相遇與重要時刻。點進每一則紀錄，閱讀其中的故事。",
@@ -65,6 +70,7 @@ const en: Dictionary = {
     description: "The official website of Karlos Ma. A space for music, moving images, artistic exploration and creative collaboration.",
   },
   pageDescriptions: {
+    videos: "Watch music videos, live performances and covers by Karlos Ma.",
     music: "Explore music by Karlos Ma: The Only, Room, Icarus's Wings, Autumn Rain and Farewell in Winter.",
     events: "Performances, activities and milestones by Karlos Ma, with photographs and personal stories.",
     about: "Meet Karlos Ma, a singer-songwriter born in Guangzhou in 2002 and based in Hong Kong, exploring vivid imagery, emotion and storytelling through sound.",
@@ -73,7 +79,7 @@ const en: Dictionary = {
   nav: {
     welcomeIntro: "Welcome to", welcomeSuffix: "’s", welcomeSubject: "World of Music.",
     welcomeTitle: "Welcome to Karlos Ma’s World of Music.",
-    music: "Music", events: "Events", about: "About", contact: "Contact",
+    music: "Music", videos: "Videos", events: "Events", about: "About", contact: "Contact",
     mainLabel: "Main navigation", languageLabel: "Choose language", homeLabel: "Karlos Ma home",
     switchZh: "切換至繁體中文", switchEn: "Switch to English", switchHans: "切换至简体中文", skip: "Skip to main content",
   },
@@ -90,6 +96,10 @@ const en: Dictionary = {
     cover: "Cover artwork to follow", year: "Year to be added", status: "Work details to follow", listen: "Listen to this work",
     coverAlt: "Cover artwork for ",
     listenOn: "Listen to {title} on {platform}",
+  },
+  videos: {
+    play: "Play: {title}", watch: "Watch on YouTube", close: "Close player",
+    note: "Videos are played via YouTube. If playback is unavailable, watch on YouTube.",
   },
   events: {
     title: "Events", body: "Performances, encounters and defining moments. Open a record to explore its story.",
@@ -120,6 +130,7 @@ const hans: Dictionary = {
     description: "Karlos Ma 官方网站。探索音乐、影像与艺术创作，或联系洽谈合作。",
   },
   pageDescriptions: {
+    videos: "观看 Karlos Ma 的音乐录影带、现场演出与翻唱视频。",
     music: "探索 Karlos Ma 的音乐作品，包括《余生仅有》、《房间》、《伊卡洛斯之翼》、《秋雨》及《雪国》。",
     events: "Karlos Ma 的演出、活动与个人里程碑，以及照片与文字记录。",
     about: "认识 Karlos Ma：2002 年生于广州、现居香港的创作歌手，以声音探索意象、情感与音乐叙事。",
@@ -128,7 +139,7 @@ const hans: Dictionary = {
   nav: {
     welcomeIntro: "欢迎来到", welcomeSuffix: "", welcomeSubject: "的音乐世界。",
     welcomeTitle: "欢迎来到 Karlos Ma 的音乐世界。",
-    music: "音乐", events: "活动", about: "关于", contact: "联系",
+    music: "音乐", videos: "视频", events: "活动", about: "关于", contact: "联系",
     mainLabel: "主要导航", languageLabel: "选择语言", homeLabel: "Karlos Ma 首页",
     switchZh: "切換至繁體中文", switchEn: "Switch to English", switchHans: "切换至简体中文", skip: "跳至主要内容",
   },
@@ -145,6 +156,10 @@ const hans: Dictionary = {
     cover: "封面待提供", year: "年份待填", status: "作品资料待补", listen: "收听作品",
     coverAlt: "作品封面：",
     listenOn: "在 {platform} 收听《{title}》",
+  },
+  videos: {
+    play: "播放：{title}", watch: "在 YouTube 观看", close: "关闭播放器",
+    note: "视频由 YouTube 提供播放。如无法加载，请前往 YouTube 观看。",
   },
   events: {
     title: "活动记录", body: "演出、相遇与重要时刻。点进每一则记录，阅读其中的故事。",

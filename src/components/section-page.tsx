@@ -3,6 +3,7 @@ import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import type { Section } from "@/i18n/metadata";
 import { MusicPage, EventsPage, AboutPage, ContactPage } from "./content-pages";
+import { VideosPage } from "./videos-page";
 
 export async function SectionPage({ params, section }: { params: Promise<{ locale: string }>; section: Section }) {
   const { locale } = await params;
@@ -11,6 +12,7 @@ export async function SectionPage({ params, section }: { params: Promise<{ local
   return (
     <main id="main-content" className={`content-page ${section}-page`} tabIndex={-1}>
       {section === "music" && <MusicPage locale={locale} dictionary={dictionary} />}
+      {section === "videos" && <VideosPage dictionary={dictionary} />}
       {section === "events" && <EventsPage locale={locale} dictionary={dictionary} />}
       {section === "about" && <AboutPage dictionary={dictionary} />}
       {section === "contact" && <ContactPage dictionary={dictionary} />}

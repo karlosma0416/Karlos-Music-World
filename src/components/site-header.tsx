@@ -14,6 +14,7 @@ export function SiteHeader({ locale, dictionary: d }: { locale: Locale; dictiona
             </a>
             <nav className="main-nav" aria-label={d.nav.mainLabel}>
                 <a href={`/${locale}/music`}>{d.nav.music}</a>
+                <a href={`/${locale}/videos`}>{d.nav.videos}</a>
                 <a href={`/${locale}/events`}>{d.nav.events}</a>
                 <a href={`/${locale}/about`}>{d.nav.about}</a>
                 <ContactNavLink href={`/${locale}/contact`} label={d.nav.contact} />

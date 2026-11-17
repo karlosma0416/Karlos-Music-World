@@ -368,6 +368,134 @@ html[lang^="zh"] .main-nav a {
     padding: 95px 0 70px;
 }
 
+.video-note {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 24px;
+    list-style: none;
+    margin: 36px 0 0;
+    padding: 0;
+}
+
+.video-grid>li,
+.video-card {
+    min-width: 0;
+}
+
+.video-screen {
+    aspect-ratio: 16 / 9;
+    background: #141313;
+    overflow: hidden;
+}
+
+.video-screen iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-preview {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.video-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 58px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #0c0b0bd9;
+    transition: background .2s ease;
+}
+
+.video-play svg {
+    width: 25px;
+    height: 25px;
+}
+
+.video-preview:hover .video-play,
+.video-preview:focus-visible .video-play {
+    background: var(--accent);
+}
+
+.video-preview:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+.video-card h2 {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.video-channel {
+    margin-top: 5px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.video-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    margin-top: 5px;
+}
+
+.video-actions a,
+.video-actions button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--muted);
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.video-actions a:hover,
+.video-actions button:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 700px) {
+    .video-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+}
+
 .eyebrow {
     color: var(--muted);
     font-size: 11px;
