@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ExternalLinkArrow } from "@/components/external-link-arrow";
 import { site } from "@/data/site";
 import { works } from "@/data/works";
 import type { Locale } from "@/i18n/config";
@@ -32,7 +33,7 @@ export function MusicPage({ locale, dictionary: d }: { locale: Locale; dictionar
                                             rel="noopener noreferrer"
                                             aria-label={`${d.works.listenOn.replace("{title}", work.title[locale]).replace("{platform}", link.platform === "NetEase" && locale !== "en" ? d.contact.netease : link.platform)} ${d.contact.newTab}`}
                                         >
-                                            {link.platform === "NetEase" && locale !== "en" ? d.contact.netease : link.platform}<span className="contact-arrow" aria-hidden="true">↗</span>
+                                            {link.platform === "NetEase" && locale !== "en" ? d.contact.netease : link.platform}<ExternalLinkArrow />
                                         </a>
                                     </li>
                                 ))}
@@ -105,7 +106,7 @@ export function ContactPage({ dictionary: d }: { dictionary: Dictionary }) {
                             rel="noopener noreferrer"
                             aria-label={`${d.contact.platformLabel.replace("{platform}", platform.name)} ${d.contact.newTab}`}
                         >
-                            {platform.name}<span className="contact-arrow" aria-hidden="true">↗</span>
+                            {platform.name}<ExternalLinkArrow />
                         </a>
                     </li>
                 ))}

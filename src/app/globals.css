@@ -592,8 +592,8 @@ html[lang^="zh"] .content-page h1 {
 }
 
 .contact-arrow {
-    color: var(--muted);
-    font-size: .6em;
+    display: block;
+    flex-shrink: 0;
     margin-left: 10px;
 }
 
