@@ -55,6 +55,7 @@ const zh = {
     body: "歡迎透過電子郵件洽談音樂、影像及跨領域創作合作，或於以下平台聆聽作品、關注近況。",
     netease: "網易雲音樂", profile: "音樂主頁", newTab: "（於新分頁開啟）",
     platformLabel: "前往 {platform} 上的 Karlos Ma 主頁",
+    enquiries: "合作與洽詢：",
     soon: "即將提供", email: "電子郵件", external: "前往平台",
   },
   message: {
@@ -127,6 +128,7 @@ const en: Dictionary = {
     body: "For music, moving images and creative collaborations, get in touch by email. Listen and follow along on the platforms below.",
     netease: "NetEase Music", profile: "Music profile", newTab: "(opens in a new tab)",
     platformLabel: "Visit Karlos Ma on {platform}",
+    enquiries: "For collaborations and enquiries:",
     soon: "Coming soon", email: "Email", external: "Visit platform",
   },
   message: {
@@ -195,6 +197,7 @@ const hans: Dictionary = {
     body: "欢迎通过电子邮件洽谈音乐、影像及跨领域创作合作，或在以下平台收听作品、关注近况。",
     netease: "网易云音乐", profile: "音乐主页", newTab: "（在新标签页中打开）",
     platformLabel: "前往 {platform} 上的 Karlos Ma 主页",
+    enquiries: "合作与咨询：",
     soon: "即将提供", email: "电子邮箱", external: "前往平台",
   },
   message: {

@@ -96,7 +96,7 @@ export function ContactPage({ dictionary: d }: { dictionary: Dictionary }) {
         <div className="contact-content">
             <h1>{d.contact.title}</h1>
             <div className="contact-email">
-                <p className="contact-label">{d.contact.email}</p>
+                <p className="contact-label">{d.contact.enquiries}</p>
                 <a href={`mailto:${site.social.email}`}>{site.social.email}</a>
             </div>
             <ul className="contact-platforms">
