@@ -1,6 +1,7 @@
 // Titles and channel verified via YouTube oEmbed; keep the supplied ordering.
 export const videos = [
     { id: "XNEAZKaBJdw", title: "餘生僅有 The Only (Music Video)", titleHans: "余生仅有 The Only (Music Video)" },
+    { id: "IhM6oPDlAGE", title: "房間 Rooms (Official Music Video)", titleHans: "房间 Rooms (Official Music Video)" },
     { id: "usf--zNYsfs", title: "KarlosMa馬浩阳 - 雪國 Farewell in Winter (Official Music Video)", titleHans: "KarlosMa马浩阳 - 雪国 Farewell in Winter (Official Music Video)" },
     { id: "cghNgP67-xk", title: "Autumn Rain (Live) with IMsweetyt" },
     { id: "c0GYclJArgI", title: "第一個清晨(First Morning) Cover", titleHans: "第一个清晨(First Morning) Cover" },

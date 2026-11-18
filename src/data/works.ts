@@ -18,7 +18,7 @@ export const works: Work[] = [
     ],
   },
   {
-    id: "room", title: { zh: "房間", en: "Room", "zh-cn": "房间" }, year: 2026, cover: "/Room.jpg",
+    id: "room", title: { zh: "房間", en: "Rooms", "zh-cn": "房间" }, year: 2026, cover: "/Room.jpg",
     links: [{ platform: "NetEase", href: "https://163cn.tv/blajrrxT" }],
   },
   {

@@ -80,7 +80,7 @@ const en: Dictionary = {
   },
   pageDescriptions: {
     videos: "Watch music videos, live performances and covers by Karlos Ma.",
-    music: "Explore music by Karlos Ma: The Only, Room, Icarus's Wings, Autumn Rain and Farewell in Winter.",
+    music: "Explore music by Karlos Ma: The Only, Rooms, Icarus's Wings, Autumn Rain and Farewell in Winter.",
     events: "Performances, activities and milestones by Karlos Ma, with photographs and personal stories.",
     about: "Meet Karlos Ma, a singer-songwriter born in Guangzhou in 2002 and based in Hong Kong, exploring vivid imagery, emotion and storytelling through sound.",
     contact: "Get in touch with Karlos Ma for music, moving images and creative collaborations.",
